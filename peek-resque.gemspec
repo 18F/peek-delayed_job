@@ -18,5 +18,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   gem.add_dependency 'peek', '>= 0.1.0'
-  gem.add_dependency 'resque'
+  gem.add_dependency 'delayed_job_active_record'
 end

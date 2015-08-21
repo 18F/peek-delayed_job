@@ -1,5 +1,3 @@
-require 'resque'
-
 module Peek
   module Views
     class Resque < View
@@ -8,20 +6,21 @@ module Peek
       end
 
       def job_count
-        lookup = @queues == ['*'] ? ::Resque.queues : @queues
-        lookup.collect { |queue| ::Resque.size(queue) }.inject(&:+)
+        Delayed::Job.count
       end
 
       def context
         {
           :jobs => {
-            :failures => ::Resque::Failure.count
+            # TODO fix for non-ActiveRecord
+            :failures => Delayed::Job.where.not(failed_at: nil).count
           }
         }
       end
 
       def results
-        { :jobs => job_count, :workers => ::Resque.workers.size }
+        # TODO get the actual worker count
+        { :jobs => job_count, :workers => 1 }
       end
     end
   end
