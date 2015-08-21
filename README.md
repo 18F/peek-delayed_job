@@ -5,6 +5,8 @@ Take a peek into the current state of your DelayedJob queue. This peek view prov
 - The total number of queued jobs.
 - The total number of failed jobs.
 
+Only supports the DelayedJob ActiveRecord backend at the moment.
+
 ## Installation
 
 Add this line to your application's Gemfile:

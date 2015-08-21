@@ -9,7 +9,6 @@ module Peek
       end
 
       def failure_count
-        # TODO fix for non-ActiveRecord
         Delayed::Job.where.not(failed_at: nil).count
       end
 
