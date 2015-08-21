@@ -6,11 +6,11 @@ require 'peek-delayed_job/version'
 Gem::Specification.new do |gem|
   gem.name          = 'peek-delayed_job'
   gem.version       = Peek::DelayedJob::VERSION
-  gem.authors       = ['Garrett Bjerkhoel']
-  gem.email         = ['me@garrettbjerkhoel.com']
+  gem.authors       = ['Aidan Feldman']
+  gem.email         = ['aidan.feldman@gsa.gov']
   gem.description   = %q{Take a peek into your DelayedJob queue.}
   gem.summary       = %q{Take a peek into your DelayedJob queue.}
-  gem.homepage      = 'https://github.com/peek/peek-delayed_job'
+  gem.homepage      = 'https://github.com/18F/peek-delayed_job'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
