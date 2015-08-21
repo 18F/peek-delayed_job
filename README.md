@@ -4,8 +4,8 @@ Take a peek into the current state of your DelayedJob queues and workers.
 
 Things this peek view provides:
 
-- The total number of queued jobs for each queue.
-- The total number of workers.
+- The total number of queued jobs<!-- for each queue -->.
+- The total number of failed jobs.
 
 ## Installation
 

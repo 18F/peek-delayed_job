@@ -6,22 +6,28 @@ module Peek
         @queues = options.fetch(:queues, ['*'])
       end
 
-      def job_count
+      def queued_count
         Delayed::Job.count
+      end
+
+      def failure_count
+        # TODO fix for non-ActiveRecord
+        Delayed::Job.where.not(failed_at: nil).count
       end
 
       def context
         {
-          :jobs => {
-            # TODO fix for non-ActiveRecord
-            :failures => Delayed::Job.where.not(failed_at: nil).count
+          jobs: {
+            failed: self.failure_count
           }
         }
       end
 
       def results
-        # TODO get the actual worker count
-        { :jobs => job_count, :workers => 1 }
+        {
+          queued: queued_count,
+          failed: failure_count
+        }
       end
     end
   end
