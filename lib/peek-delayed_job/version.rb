@@ -1,5 +1,5 @@
 module Peek
-  module Resque
+  module DelayedJob
     VERSION = '2.0.1'
   end
 end

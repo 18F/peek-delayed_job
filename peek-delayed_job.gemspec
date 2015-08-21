@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'peek-resque/version'
+require 'peek-delayed_job/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'peek-resque'
-  gem.version       = Peek::Resque::VERSION
+  gem.name          = 'peek-delayed_job'
+  gem.version       = Peek::DelayedJob::VERSION
   gem.authors       = ['Garrett Bjerkhoel']
   gem.email         = ['me@garrettbjerkhoel.com']
-  gem.description   = %q{Take a peek into your Resque queues and workers.}
-  gem.summary       = %q{Take a peek into your Resque queues and workers.}
-  gem.homepage      = 'https://github.com/peek/peek-resque'
+  gem.description   = %q{Take a peek into your DelayedJob queues and workers.}
+  gem.summary       = %q{Take a peek into your DelayedJob queues and workers.}
+  gem.homepage      = 'https://github.com/peek/peek-delayed_job'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

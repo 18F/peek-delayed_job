@@ -1,6 +1,6 @@
 module Peek
   module Views
-    class Resque < View
+    class DelayedJob < View
       def initialize(options = {})
         # TODO handle queues config
         @queues = options.fetch(:queues, ['*'])

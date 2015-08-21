@@ -1,6 +1,6 @@
-# Peek::Resque
+# Peek::DelayedJob
 
-Take a peek into the current state of your Resque queues and workers.
+Take a peek into the current state of your DelayedJob queues and workers.
 
 Things this peek view provides:
 
@@ -11,7 +11,7 @@ Things this peek view provides:
 
 Add this line to your application's Gemfile:
 
-    gem 'peek-resque'
+    gem 'peek-delayed_job'
 
 And then execute:
 
@@ -19,27 +19,27 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install peek-resque
+    $ gem install peek-delayed_job
 
 ## Usage
 
 Add the following to your `config/initializers/peek.rb`:
 
 ```ruby
-Peek.into Peek::Views::Resque
+Peek.into Peek::Views::DelayedJob
 ```
 
 and the following to `app/assets/javascripts/application.js` (or whatever file contains `require peek`):
 
 ```javascript
-//= require peek/views/resque
+//= require peek/views/delayed_job
 ```
 
 By default, it will track all queues. If you'd like to limit the number of queues
 it displays, you can pass in the `:queues` option:
 
 ```ruby
-Peek.into Peek::Views::Resque, :queues => ['notifications', 'backups']
+Peek.into Peek::Views::DelayedJob, :queues => ['notifications', 'backups']
 ```
 
 ## Contributing
