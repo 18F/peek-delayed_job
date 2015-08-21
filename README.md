@@ -35,17 +35,11 @@ and the following to `app/assets/javascripts/application.js` (or whatever file c
 //= require peek/views/delayed_job
 ```
 
+<!--
 By default, it will track all queues. If you'd like to limit the number of queues
 it displays, you can pass in the `:queues` option:
 
 ```ruby
 Peek.into Peek::Views::DelayedJob, :queues => ['notifications', 'backups']
 ```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+-->
