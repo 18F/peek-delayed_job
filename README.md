@@ -23,10 +23,16 @@ Or install it yourself as:
 
 ## Usage
 
-Add the following to your `config/initializers/peek.rb`: 
+Add the following to your `config/initializers/peek.rb`:
 
 ```ruby
 Peek.into Peek::Views::Resque
+```
+
+and the following to `app/assets/javascripts/application.js` (or whatever file contains `require peek`):
+
+```javascript
+//= require peek/views/resque
 ```
 
 By default, it will track all queues. If you'd like to limit the number of queues
