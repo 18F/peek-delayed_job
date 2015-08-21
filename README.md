@@ -1,8 +1,6 @@
 # Peek::DelayedJob
 
-Take a peek into the current state of your DelayedJob queue.
-
-Things this peek view provides:
+Take a peek into the current state of your DelayedJob queue. This peek view provides:
 
 - The total number of queued jobs.
 - The total number of failed jobs.
@@ -11,7 +9,9 @@ Things this peek view provides:
 
 Add this line to your application's Gemfile:
 
-    gem 'peek-delayed_job'
+```ruby
+gem 'peek-delayed_job'
+```
 
 And then execute:
 
@@ -29,7 +29,7 @@ Add the following to your `config/initializers/peek.rb`:
 Peek.into Peek::Views::DelayedJob
 ```
 
-and the following to `app/assets/javascripts/application.js` (or whatever file contains `require peek`):
+and the following to `app/assets/javascripts/application.js` below `require peek`:
 
 ```javascript
 //= require peek/views/delayed_job
