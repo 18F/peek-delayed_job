@@ -2,8 +2,6 @@ module Peek
   module Views
     class DelayedJob < View
       def initialize(options = {})
-        # TODO handle queues config
-        @queues = options.fetch(:queues, ['*'])
       end
 
       def queued_count
@@ -25,8 +23,8 @@ module Peek
 
       def results
         {
-          queued: queued_count,
-          failed: failure_count
+          queued: self.queued_count,
+          failed: self.failure_count
         }
       end
     end

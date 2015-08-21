@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Peek::DelayedJob::VERSION
   gem.authors       = ['Garrett Bjerkhoel']
   gem.email         = ['me@garrettbjerkhoel.com']
-  gem.description   = %q{Take a peek into your DelayedJob queues and workers.}
-  gem.summary       = %q{Take a peek into your DelayedJob queues and workers.}
+  gem.description   = %q{Take a peek into your DelayedJob queue.}
+  gem.summary       = %q{Take a peek into your DelayedJob queue.}
   gem.homepage      = 'https://github.com/peek/peek-delayed_job'
 
   gem.files         = `git ls-files`.split($/)
