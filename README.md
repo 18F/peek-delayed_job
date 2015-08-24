@@ -8,24 +8,18 @@ Only supports the DelayedJob ActiveRecord backend at the moment.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+1. Add this line to your application's Gemfile:
 
-```ruby
-gem 'peek-delayed_job'
-```
+    ```ruby
+    gem 'peek-delayed_job'
+    ```
 
-And then execute:
+1. Run
 
-    $ bundle
+        $ bundle
 
-Or install it yourself as:
+1. Add the following to `config/initializers/peek.rb`:
 
-    $ gem install peek-delayed_job
-
-## Usage
-
-Add the following to your `config/initializers/peek.rb`:
-
-```ruby
-Peek.into Peek::Views::DelayedJob
-```
+    ```ruby
+    Peek.into Peek::Views::DelayedJob
+    ```
