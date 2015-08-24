@@ -1,9 +1,8 @@
 # Peek::DelayedJob
 
-Take a peek into the current state of your DelayedJob queue. This peek view provides:
+Take a peek into the current state of your DelayedJob queue.
 
-- The total number of queued jobs.
-- The total number of failed jobs.
+![screenshot](screenshot.png)
 
 Only supports the DelayedJob ActiveRecord backend at the moment.
 
