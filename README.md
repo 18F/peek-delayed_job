@@ -30,9 +30,3 @@ Add the following to your `config/initializers/peek.rb`:
 ```ruby
 Peek.into Peek::Views::DelayedJob
 ```
-
-and the following to `app/assets/javascripts/application.js` below `require peek`:
-
-```javascript
-//= require peek/views/delayed_job
-```
