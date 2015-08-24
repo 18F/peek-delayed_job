@@ -1,5 +1,5 @@
 module Peek
-  module Resque
+  module DelayedJob
     class Railtie < ::Rails::Engine
     end
   end

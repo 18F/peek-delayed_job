@@ -1,17 +1,19 @@
-# Peek::Resque
+# Peek::DelayedJob
 
-Take a peek into the current state of your Resque queues and workers.
+Take a peek into the current state of your DelayedJob queue. This peek view provides:
 
-Things this peek view provides:
+- The total number of queued jobs.
+- The total number of failed jobs.
 
-- The total number of queued jobs for each queue.
-- The total number of workers.
+Only supports the DelayedJob ActiveRecord backend at the moment.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'peek-resque'
+```ruby
+gem 'peek-delayed_job'
+```
 
 And then execute:
 
@@ -19,27 +21,18 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install peek-resque
+    $ gem install peek-delayed_job
 
 ## Usage
 
-Add the following to your `config/initializers/peek.rb`: 
+Add the following to your `config/initializers/peek.rb`:
 
 ```ruby
-Peek.into Peek::Views::Resque
+Peek.into Peek::Views::DelayedJob
 ```
 
-By default, it will track all queues. If you'd like to limit the number of queues
-it displays, you can pass in the `:queues` option:
+and the following to `app/assets/javascripts/application.js` below `require peek`:
 
-```ruby
-Peek.into Peek::Views::Resque, :queues => ['notifications', 'backups']
+```javascript
+//= require peek/views/delayed_job
 ```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
