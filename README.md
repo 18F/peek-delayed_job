@@ -1,6 +1,6 @@
 # Peek::DelayedJob
 
-Take a peek into the current state of your DelayedJob queue.
+Take a peek into the current state of your [Delayed::Job](https://github.com/collectiveidea/delayed_job) queue – see the [peek](https://github.com/peek/peek) project for general information.
 
 ![screenshot](screenshot.png)
 
