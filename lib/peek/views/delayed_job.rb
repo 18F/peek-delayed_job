@@ -2,6 +2,11 @@ module Peek
   module Views
     class DelayedJob < View
       def initialize(options = {})
+        @label = options[:label]
+      end
+
+      def label
+        @label || 'delayed::job'
       end
 
       def queued_count

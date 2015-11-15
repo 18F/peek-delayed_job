@@ -18,8 +18,18 @@ Only supports the DelayedJob ActiveRecord backend at the moment.
 
         $ bundle
 
-1. Add the following to `config/initializers/peek.rb`:
+3. Add the following to `config/initializers/peek.rb`:
 
     ```ruby
     Peek.into Peek::Views::DelayedJob
     ```
+
+## Configuration
+
+In some cases instead of using the default 'delayed::job' label, you would like
+to use a different label (such as 'DJ'). To achieve this, you can provide it as
+an argument within the initialiser - like so:
+
+```ruby
+Peek.into Peek::Views::DelayedJob, :label => 'DJ'
+```
