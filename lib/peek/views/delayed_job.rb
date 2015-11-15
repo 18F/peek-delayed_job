@@ -2,7 +2,7 @@ module Peek
   module Views
     class DelayedJob < View
       def initialize(options = {})
-        @label = options.delete(:label)
+        @label = options[:label]
       end
 
       def label
