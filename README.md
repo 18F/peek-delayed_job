@@ -26,10 +26,8 @@ Only supports the DelayedJob ActiveRecord backend at the moment.
 
 ## Configuration
 
-In some cases instead of using the default 'delayed::job' label, you would like
-to use a different label (such as 'DJ'). To achieve this, you can provide it as
-an argument within the initialiser - like so:
+If you would like to change the default label (`delayed::job`) to something custom, include the `label` option as an argument in the initializer:
 
 ```ruby
-Peek.into Peek::Views::DelayedJob, :label => 'DJ'
+Peek.into Peek::Views::DelayedJob, label: 'DJ'
 ```
